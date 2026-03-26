@@ -1,0 +1,24 @@
+# Ignore venvs
+venv/
+env/
+*.egg-info/
+
+# Ignore SQLite DBs
+*.sqlite
+*.db
+data/
+
+# Ignore config files
+core/config.py
+secret*
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/editor files
+.vscode/
+.idea/
+*.log
