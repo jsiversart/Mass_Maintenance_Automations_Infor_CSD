@@ -13,6 +13,7 @@ PATHS = {
     "oantostock": Path(r"path\to\folder\which\contains\xlsx"), #most recent .xlsx in folder should be column A = whse, column B = prod, where all prod / warehouse combos listed should be converted to status STOCK in ICSW
     "threshold_data":Path(r"path\to\folder\which\containing\threshold\data"),
     "whse_rank_data": Path(r"path\to\whse\rank\data"),
+    "dnr": Path(r"path\to\dnr\data\folder"),
     "icsw_maint_spreadsheet": (r"path\to\monthly icsw maintenance guide.xlsx"), #contains usage control rules, arppath exceptions
     "warehouse_info_csv": (r"path\to\whseinfo.csv"), #contains warehouse information relating to correct product / product line setup
 }
@@ -30,7 +31,7 @@ JDBC = {
 
 EMAILS = {
     "mass_maint_user":"myemail@company.com",
-    "sup_nla_notification_emails":"Caleb.Lahaie@dlpartsco.com; Dawn.Schallert@dlpartsco.com"
+    "sup_nla_notification_emails": ["person1@company.com", "person2@company.com"]
 }
 
 GMAIL_CREDS = {

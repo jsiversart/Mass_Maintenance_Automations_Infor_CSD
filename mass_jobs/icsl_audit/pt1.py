@@ -153,7 +153,7 @@ def main():
         )
         load_csv_to_sqlite(
             conn,
-            filepath=PATHS["warehouse_info_csd"],
+            filepath=PATHS["warehouse_info_csv"],
             table_name="whseinfo",
             # optional CSV params:
             # sep=";", encoding="utf-8", dtype=str

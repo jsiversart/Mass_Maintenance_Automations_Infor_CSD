@@ -4,8 +4,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-BASE_DIR = Path("mass_jobs")
 
+
+BASE_DIR = Path("mass_jobs")
+# change to absolute or relative to repo root
+BASE_DIR = Path(__file__).resolve().parent.parent / "mass_jobs"
 
 # -------------------------
 # Helpers

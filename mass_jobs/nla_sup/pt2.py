@@ -150,12 +150,6 @@ def update_icsw(icsw_df, lookup_df, prodline_map):
         if any(op in ["WCMSDC", "WPMSBR", "WPMSDC"] for op in old_prodline_vals):
             icsw_df.loc[icsw_df["prod"] == new, "prodline"] = old_prodline_vals[0]
 
-            return icsw_df
-
-
-
-
-
         # --- New numbers ---
         if new != "NLA":
             # if vendprod = !999! → clear
@@ -398,7 +392,7 @@ def main():
         send_email(
             subject=subject,
             body=body,
-            to_addrs=EMAILS[mass_maint_user],
+            to_addrs=EMAILS["mass_maint_user"],
             cc=[],
             bcc=[],
             html=False
@@ -409,8 +403,8 @@ def main():
         "Hello,\n\n"
         "This is an automated email to notify you that the 'NLAs and SUPs to process.xlsx' list has been updated.\n"
     )
-    to_addrs = EMAILS[sup_nla_notification_emails]
-    cc = EMAILS[mass_maint_user]
+    to_addrs = EMAILS["sup_nla_notification_emails"]
+    cc = EMAILS["mass_maint_user"]
     bcc = []  # optional
 
     send_email(

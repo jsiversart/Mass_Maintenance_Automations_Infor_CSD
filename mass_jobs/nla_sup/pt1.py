@@ -31,7 +31,7 @@ def main():
     df.columns = ["Old", "New"]
 
     # Trim whitespace & drop empty rows
-    df = df.applymap(lambda x: str(x).strip() if pd.notna(x) else "")
+    df = df.map(lambda x: str(x).strip() if pd.notna(x) else "")
 
     # --- Build Lists ---
     # 1. Comma-delimited, trimmed list of both old and new (label "Prod list")

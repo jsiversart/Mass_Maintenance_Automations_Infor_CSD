@@ -17,7 +17,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 from core.notifier import send_email
 from core.config import JDBC, EMAILS
-from core.queries import COUNT_FLAG_QUERY
+from core.queries import COUNT_FLAG_SQL
 
 
 
@@ -39,7 +39,7 @@ def run_query_and_email():
     )
 
     # === RUN QUERY ===
-    df = pd.read_sql_query(COUNT_FLAG_QUERY, conn)
+    df = pd.read_sql_query(COUNT_FLAG_SQL, conn)
     conn.close()
 
     print(f"Retrieved {len(df)} rows.")

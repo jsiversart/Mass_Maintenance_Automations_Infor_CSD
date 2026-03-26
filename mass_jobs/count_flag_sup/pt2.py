@@ -54,7 +54,6 @@ def main():
     df_erp.drop(columns='key', inplace=True)
 
     # === STEP 4: SAVE UPDATED FILE ===
-    output_file = erp_file.with_name(f"{erp_file.name}")
     df_erp.to_csv(erp_file, sep='\t', index=False)
     print(f"Updated file saved (overwritten): {erp_file.name}")
 

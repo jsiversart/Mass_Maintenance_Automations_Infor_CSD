@@ -1,0 +1,4 @@
+[project]
+name = "massmaint"
+[project.scripts]
+massmaint = "CLI:main"
